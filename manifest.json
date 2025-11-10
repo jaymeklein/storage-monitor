@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Local Storage Monitor",
+  "version": "1.1",
+  "description": "Monitor and copy values from local storage",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Local Storage Monitor"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
